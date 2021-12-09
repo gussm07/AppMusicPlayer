@@ -1,5 +1,7 @@
 package edu.ieu.appmusicplayer;
 
+import static android.graphics.Color.WHITE;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,6 +9,7 @@ import android.animation.Animator;
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.content.Intent;
+import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.media.MediaPlayer;
 import android.net.Uri;
@@ -75,6 +78,8 @@ public class activity_player extends AppCompatActivity {
         visualizer = findViewById(R.id.blast);
         imageView = findViewById(R.id.imageview);
 
+
+
         if(mediaPlayer != null)
         {
             mediaPlayer.stop();
@@ -117,8 +122,8 @@ public class activity_player extends AppCompatActivity {
         };
         seekmusic.setMax(mediaPlayer.getDuration());
         updateseekbar.start();
-        seekmusic.getProgressDrawable().setColorFilter(getResources().getColor(R.color.colorPrimary), PorterDuff.Mode.MULTIPLY);
-        seekmusic.getThumb().setColorFilter(getResources().getColor(R.color.colorPrimary), PorterDuff.Mode.SRC_IN);
+        seekmusic.getProgressDrawable().setColorFilter(getResources().getColor(R.color.white), PorterDuff.Mode.MULTIPLY);
+        seekmusic.getThumb().setColorFilter(getResources().getColor(R.color.white), PorterDuff.Mode.SRC_IN);
 
         seekmusic.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
@@ -192,7 +197,7 @@ public class activity_player extends AppCompatActivity {
                 txtsname.setText(sname);
                 mediaPlayer.start();
                 btnplay.setBackgroundResource(R.drawable.ic_baseline_pause_24);
-                startAnimation(imageView);
+                AnimationForward(imageView);
                 int audiosessionId = mediaPlayer.getAudioSessionId();
                 if(audiosessionId != -1)
                 {
@@ -214,7 +219,7 @@ public class activity_player extends AppCompatActivity {
                 txtsname.setText(sname);
                 mediaPlayer.start();
                 btnplay.setBackgroundResource(R.drawable.ic_baseline_pause_24);
-                startAnimation(imageView);
+                AnimationBackward(imageView);
                 int audiosessionId = mediaPlayer.getAudioSessionId();
                 if(audiosessionId != -1)
                 {
@@ -246,8 +251,16 @@ public class activity_player extends AppCompatActivity {
         });
     }
     /* ANIMAR LA IMAGEN DE MUSICA CON GIRO DE 0 A 360GRADOS */
-    public void startAnimation(View view){
+    public void AnimationForward(View view){
         ObjectAnimator animator = ObjectAnimator.ofFloat(imageView, "rotation",0f,360f);
+        animator.setDuration(1000);
+        AnimatorSet animatorSet = new AnimatorSet();
+        animatorSet.playTogether(animator);
+        animatorSet.start();
+    }
+    /* ANIMAR LA IMAGEN DE MUSICA CON GIRO DE 360 A 0 GRADOS */
+    public void AnimationBackward(View view){
+        ObjectAnimator animator = ObjectAnimator.ofFloat(imageView, "rotation",360f,0f);
         animator.setDuration(1000);
         AnimatorSet animatorSet = new AnimatorSet();
         animatorSet.playTogether(animator);

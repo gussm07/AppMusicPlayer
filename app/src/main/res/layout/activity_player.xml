@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_img1"
+    android:background="@drawable/bg_playing"
     android:orientation="vertical">
 
     <LinearLayout
@@ -94,12 +94,15 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+
             <Button
                 android:id="@+id/playbtn"
-                android:layout_centerHorizontal="true"
-                android:background="@drawable/ic_baseline_play_arrow_24"
                 android:layout_width="70dp"
-                android:layout_height="70dp">
+                android:layout_height="70dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/ic_play"
+                android:tint="@color/white"
+                >
 
             </Button>
 
@@ -109,7 +112,14 @@
                 android:layout_height="50dp"
                 android:layout_marginTop="15dp"
                 android:layout_toRightOf="@+id/playbtn"
-                android:background="@drawable/ic_baseline_skip_next_24">
+                android:background="@drawable/ic_baseline_skip_next_24"
+                android:textColor="@color/white"
+                android:textColorHighlight="@color/white"
+                android:textColorHint="@color/white"
+                android:textColorLink="@color/white"
+                app:iconTint="@color/white"
+                app:rippleColor="@color/white"
+                app:strokeColor="#FFFFFF">
 
             </Button>
             <Button
@@ -120,24 +130,29 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp">
             </Button>
-            <Button
-                android:id="@+id/btnff"
-                android:layout_toRightOf="@+id/btnnext"
-                android:layout_marginTop="20dp"
-                android:layout_marginLeft="15dp"
-                android:background="@drawable/ic_baseline_fast_forward_24"
-                android:layout_width="40dp"
-                android:layout_height="40dp">
-            </Button>
 
             <Button
+                android:id="@+id/btnff"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@+id/btnnext"
+                android:background="@drawable/ic_baseline_fast_forward_24"></Button>
+
+            <Button
+                android:tint="@color/white"
                 android:id="@+id/btnfr"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="15dp"
                 android:layout_toLeftOf="@+id/btnprev"
-                android:background="@drawable/ic_baseline_fast_rewind_24">
+                android:background="@drawable/ic_fr"
+                android:backgroundTint="@color/white"
+                android:drawableTint="@color/white"
+                android:textColor="@android:color/white"
+                app:iconTint="@color/white">
 
             </Button>
 

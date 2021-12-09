@@ -1,6 +1,7 @@
 package edu.ieu.appmusicplayer;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.Manifest;
 import android.content.Intent;
@@ -39,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
     ListView listView;
     String[] items;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,6 +48,9 @@ public class MainActivity extends AppCompatActivity {
 
         listView = findViewById(R.id.listViewSongs);
         runtimePermission();
+        getSupportActionBar().setTitle("MUSIC");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
 
 
     }

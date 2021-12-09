@@ -3,10 +3,15 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/DEVELOPER/ANDROID_APPS/AppMusicPlayer/app/src/main/res/drawable-v24/ic_baseline_fast_rewind_24.xml" value="0.378125" />
         <entry key="..\:/DEVELOPER/ANDROID_APPS/AppMusicPlayer/app/src/main/res/drawable-v24/ic_baseline_pause_24.xml" value="0.3828125" />
+        <entry key="..\:/DEVELOPER/ANDROID_APPS/AppMusicPlayer/app/src/main/res/drawable-v24/ic_baseline_play_arrow_24.xml" value="0.3828125" />
+        <entry key="..\:/DEVELOPER/ANDROID_APPS/AppMusicPlayer/app/src/main/res/drawable/bg_playing.xml" value="0.3723076923076923" />
+        <entry key="..\:/DEVELOPER/ANDROID_APPS/AppMusicPlayer/app/src/main/res/drawable/ic_fr.xml" value="0.3" />
+        <entry key="..\:/DEVELOPER/ANDROID_APPS/AppMusicPlayer/app/src/main/res/drawable/ic_play.xml" value="0.3828125" />
         <entry key="..\:/DEVELOPER/ANDROID_APPS/AppMusicPlayer/app/src/main/res/drawable/list_bg.xml" value="0.3828125" />
         <entry key="..\:/DEVELOPER/ANDROID_APPS/AppMusicPlayer/app/src/main/res/layout/activity_main.xml" value="0.2957427536231884" />
-        <entry key="..\:/DEVELOPER/ANDROID_APPS/AppMusicPlayer/app/src/main/res/layout/activity_player.xml" value="0.36666666666666664" />
+        <entry key="..\:/DEVELOPER/ANDROID_APPS/AppMusicPlayer/app/src/main/res/layout/activity_player.xml" value="0.35353535353535354" />
         <entry key="..\:/DEVELOPER/ANDROID_APPS/AppMusicPlayer/app/src/main/res/layout/list_item.xml" value="0.36666666666666664" />
       </map>
     </option>
